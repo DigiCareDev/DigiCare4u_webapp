@@ -1,0 +1,350 @@
+/* *,::after,::before{box-sizing:border-box}html{box-sizing:border-box;font-size:100%;line-height:1.3;text-size-adjust:100%}body{height:100vh}img,picture{max-width:100%;display:block}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}button,h1,h2,h3,h4,input,label{line-height:1.1}h1,h2,h3,h4,h5,h6{text-wrap:balance;font-size:inherit;font-weight:inherit}button,input,select,textarea{font-family:inherit;font-size:inherit}ol,ul{list-style:none;margin:0;padding:0}a{color:currentColor;cursor:pointer;text-decoration:none} */
+
+
+h1 {
+   text-align: center;
+   font-weight: 300;
+   color: #777
+}
+
+h1 span {
+   font-weight: 600;
+}
+
+/* .title {
+	margin-top: 2rem;
+  } */
+/* 	main  */
+
+body
+{
+	font-size : 1rem;
+	font-weight : 400;
+	line-height : 1.75;
+
+	letter-spacing : 1px;
+
+	color : #191c32;
+	background : #fff;
+}
+
+.page
+{
+	display : grid;
+
+	width : 100%;
+	max-width : 100vw;
+	height : 100%;
+
+	margin : auto;
+}
+
+.timeline
+{
+	display : grid;
+
+	width : 100vw;
+	max-width : 1080px;
+	height : 100%;
+
+	margin : auto;
+	padding : 0 2rem 4rem;
+
+	grid-template-columns : 1fr;
+	grid-template-rows : auto;
+}
+
+.timeline img
+{
+	display : grid;
+
+	width : 175px;
+	height : 203px;
+
+	margin : auto;
+	padding : 1rem;
+
+	place-items : center;
+}
+
+.timeline h2
+{
+	display : grid;
+
+	text-align : center;
+
+	place-items : center;
+}
+
+.timeline h2::after
+{
+	position : relative;
+
+	display : grid;
+
+	width : 6rem;
+	height : 1px;
+	margin-top : 1rem;
+
+	content : '';
+
+	background : #ff5d8f;
+
+	place-items : center;
+}
+
+.timeline h3.pro
+{
+	display : grid;
+
+	padding : 1rem 0;
+
+	text-align : center;
+}
+
+.timeline h5
+{
+	display : grid;
+
+	text-align : center;
+	font-weight: 800;
+	font-style: italic;
+}
+
+.tree
+{
+	position : relative;
+
+	display : grid;
+	overflow : hidden;
+
+	width : 100%;
+	height : 100%;
+
+	margin : auto;
+
+	grid-template-columns : 1fr 1fr;
+}
+
+.tree::before
+{
+	position : absolute;
+	z-index : 1;
+	top : 0;
+	left : 50%;
+
+	width : 3px;
+	height : 100%;
+
+	content : '';
+
+	background : #d2e3ed;
+}
+
+.timeline-right
+{
+	position : relative;
+
+	display : grid;
+
+	width : 100%;
+
+	grid-column : 2/2;
+	justify-items : start;
+	place-items : center;
+}
+
+.timeline-left
+{
+	position : relative;
+
+	display : grid;
+
+	width : 100%;
+
+	grid-column : 1/1;
+	justify-items : end;
+	place-items : center;
+}
+
+.timeline-right-0 ,
+.timeline-left-0
+{
+	min-height : 2rem;
+}
+
+.marker-r
+{
+	position : absolute;
+	z-index : 2;
+	right : 100%;
+
+	width : 18px;
+	height : 18px;
+	margin-right : -10px;
+
+	border : 2px solid #d2e3ed;
+	border-radius : 50%;
+	background : #2d8ae9;
+}
+
+.marker-l
+{
+	position : absolute;
+	z-index : 3;
+	left : 100%;
+
+	width : 18px;
+	height : 18px;
+
+	margin-left : -8px;
+
+	border : 2px solid #d2e3ed;
+	border-radius : 50%;
+	background : #2d8ae9;
+}
+
+.timeline-content
+{
+	width : 80%;
+	padding : 2.5rem;
+
+	color : #726659;
+}
+
+.timeline-content h3
+{
+	margin : .5rem 0;
+}
+
+.timeline-content span
+{
+	font-size : 1rem;
+
+	padding : 6px 15px;
+
+	color : #fff;
+	border-radius : 3px;
+	background : #2d8ae9;
+	font-style: italic;
+}
+
+.timeline-content p
+{
+	font-size : .9375rem;
+
+	margin-top : .5rem;
+
+	color : #000;
+	font-style: italic;
+}
+
+.tree div:nth-child(odd) > .timeline-content
+{
+	margin-top : 0;
+
+	text-align : left;
+}
+
+.tree div:nth-child(even) > .timeline-content
+{
+	margin-top : -16rem;
+
+	text-align : right;
+}
+
+/*  responsive  */
+
+@media only screen and (max-width: 40em)  /* max-width 640px */
+{
+
+.timeline img
+{
+	display : grid;
+
+	margin : 1rem;
+	padding : 0;
+}
+
+.tree
+{
+	grid-template-columns : 1fr;
+}
+
+.tree::before
+{
+	left : 1rem;
+}
+
+.timeline h2 ,
+.timeline h3.pro ,
+.timeline h5
+{
+	line-height : 1;
+
+	display : block;
+
+	padding-left : 1rem;
+
+	text-align : left;
+}
+
+.timeline-content h3
+{
+	line-height : .9;
+}
+
+.timeline-right
+{
+	grid-column : 1/1;
+	justify-items : start;
+}
+
+.timeline-left
+{
+	grid-column : 1/1;
+	justify-items : start;
+}
+
+.timeline-right-0 ,
+.timeline-left-0
+{
+	display : none;
+}
+
+.marker-r
+{
+	left : .5rem;
+
+	margin-right : -10px;
+}
+
+.marker-l
+{
+	left : 1rem;
+}
+
+.tree div:nth-child(even) > .timeline-content
+{
+	width : 80%;
+	margin-top : 0;
+	padding : 0 2rem;
+
+	text-align : left;
+}
+
+.diploma
+{
+	padding : 4rem 2rem ;
+
+	gap : .25rem;
+	grid-template-columns : repeat(2,1fr);
+}
+
+.diploma img
+{	
+	width : 200px;
+	margin : 0;
+}
+
+}
