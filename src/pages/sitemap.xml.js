@@ -1,5 +1,5 @@
 export default function handler(req, res) {
-    const siteUrl = "https://www.digicare4u.com"; // Your actual website URL
+    const siteUrl = "https://www.digicare4u.com";
   
     const pages = [
       "/",
