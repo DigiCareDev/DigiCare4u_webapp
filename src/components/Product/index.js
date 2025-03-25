@@ -20,7 +20,7 @@ function index() {
                 </div>
                 <div className="flex flex-col-reverse md:flex-row gap-8 items-center mt-6">
                     <div className="flex justify-center">
-                        <Image src="/images/sos.png" alt="Selected Area wise Attendance" width={300} height={200} className="rounded-lg shadow-md" />
+                        <Image src="/images/sos-tracking.png" alt="Selected Area wise Attendance" width={300} height={200} className="rounded-lg shadow-md" />
                     </div>
                     <div>
                         <h2 className="text-2xl font-bold text-black">
@@ -39,7 +39,7 @@ function index() {
                         </p>
                     </div>
                     <div className="flex justify-center">
-                        <Image src="/images/report1.jpg" alt="Selected Area wise Attendance" width={300} height={200} className="rounded-lg shadow-md" />
+                        <Image src="/images/report.png" alt="Selected Area wise Attendance" width={300} height={200} className="rounded-lg shadow-md" />
                     </div>
                 </div>
             </div>
